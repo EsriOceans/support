@@ -37,3 +37,6 @@ nosetests.xml
 # vim cruft
 *.swp
 *.swo
+
+# sde connections
+*.sde
