@@ -1,0 +1,4 @@
+\ln(S_{ij}) = \ln(O_i\cdot{}D_j) - \ln(e^{c_{ij}})
+
+
+\ln(S_{ij}) = \ln(O_i\cdot{}D_j) - c_{ij}
