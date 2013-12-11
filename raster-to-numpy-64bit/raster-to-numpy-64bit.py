@@ -36,12 +36,11 @@ big_plus_raster = os.path.join(gdb_path, "bigp_raster")
 
 arcpy.env.overwriteOutput = True
 
-"""
 print "creating big raster...",
 r1 = arcpy.sa.CreateNormalRaster(1, arcpy.Extent(0, 0, 20000, 21474))
 print "saving raster to disk...",
 r1.save(big_raster)
-"""
+
 computed_size = 20000*21474
 print "loading big raster ({} elements; {} bytes) into memory".format(computed_size, computed_size*32)
 big_numpy_array = arcpy.RasterToNumPyArray(big_raster) # peak: 1.6Gb; 3.6 VS
@@ -49,13 +48,13 @@ print "loaded big raster, size: {}, data type: {}".format(big_numpy_array.size, 
 del big_numpy_array
 
 # 4,294,967,296 == 4GB is the limit.
-"""
+
 print "creating big+1 raster...",
 r2 = arcpy.sa.CreateNormalRaster(1, arcpy.Extent(0, 0, 25000, 21475))
 print "saving raster to disk...",
 r2.save(big_plus_raster)
 print " done."
-"""
+
 computed_size = 20000*21475
 print "loading big+1 raster ({} elements; {} bytes) into memory".format(computed_size, computed_size*32)
 # THIS NEXT COMMAND WILL CRASH
