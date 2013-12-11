@@ -1,0 +1,446 @@
+0000000071C1E44C  ret              
+0000000071C1E44D  nop         dword ptr [rax] 
+0000000071C1E450  dec         rcx  
+0000000071C1E453  mov         al,byte ptr [rdx+rcx] 
+0000000071C1E456  dec         r8   
+0000000071C1E459  mov         byte ptr [rcx],al 
+0000000071C1E45B  jne         memmove+220h (71C1E450h) 
+0000000071C1E45D  mov         rax,r11 
+0000000071C1E460  ret              
+0000000071C1E461  nop         word ptr [rax+rax] 
+0000000071C1E470  xchg        ax,ax 
+0000000071C1E474  xchg        ax,ax 
+0000000071C1E477  cmp         r9,2000h 
+0000000071C1E47E  jae         memmove+292h (71C1E4C2h) 
+0000000071C1E480  mov         rax,qword ptr [rdx+rcx-8] 
+0000000071C1E485  mov         r10,qword ptr [rdx+rcx-10h] 
+0000000071C1E48A  sub         rcx,20h 
+0000000071C1E48E  mov         qword ptr [rcx+18h],rax 
+0000000071C1E492  mov         qword ptr [rcx+10h],r10 
+0000000071C1E496  mov         rax,qword ptr [rdx+rcx+8] 
+0000000071C1E49B  mov         r10,qword ptr [rdx+rcx] 
+0000000071C1E49F  dec         r9   
+0000000071C1E4A2  mov         qword ptr [rcx+8],rax 
+0000000071C1E4A6  mov         qword ptr [rcx],r10 
+0000000071C1E4A9  jne         memmove+250h (71C1E480h) 
+0000000071C1E4AB  and         r8,1Fh 
+0000000071C1E4AF  jmp         memmove+1F7h (71C1E427h) 
+0000000071C1E4B4  nop         word ptr [rax+rax] 
+0000000071C1E4C0  xchg        ax,ax 
+0000000071C1E4C2  cmp         rdx,0FFFFFFFFFFFFF000h 
+0000000071C1E4C9  ja          memmove+250h (71C1E480h) 
+0000000071C1E4CB  mov         eax,20h 
+0000000071C1E4D0  sub         rcx,80h 
+0000000071C1E4D7  prefetchnta [rdx+rcx] 
+0000000071C1E4DB  prefetchnta [rdx+rcx+40h] 
+0000000071C1E4E0  dec         eax  
+0000000071C1E4E2  jne         memmove+2A0h (71C1E4D0h) 
+0000000071C1E4E4  add         rcx,1000h 
+0000000071C1E4EB  mov         eax,40h 
+0000000071C1E4F0  mov         r9,qword ptr [rdx+rcx-8] 
+0000000071C1E4F5  mov         r10,qword ptr [rdx+rcx-10h] 
+0000000071C1E4FA  movnti      qword ptr [rcx-8],r9 
+0000000071C1E4FF  movnti      qword ptr [rcx-10h],r10 
+0000000071C1E504  mov         r9,qword ptr [rdx+rcx-18h] 
+0000000071C1E509  mov         r10,qword ptr [rdx+rcx-20h] 
+0000000071C1E50E  movnti      qword ptr [rcx-18h],r9 
+0000000071C1E513  movnti      qword ptr [rcx-20h],r10 
+0000000071C1E518  mov         r9,qword ptr [rdx+rcx-28h] 
+0000000071C1E51D  mov         r10,qword ptr [rdx+rcx-30h] 
+0000000071C1E522  sub         rcx,40h 
+0000000071C1E526  movnti      qword ptr [rcx+18h],r9 
+0000000071C1E52B  movnti      qword ptr [rcx+10h],r10 
+0000000071C1E530  mov         r9,qword ptr [rdx+rcx+8] 
+0000000071C1E535  mov         r10,qword ptr [rdx+rcx] 
+0000000071C1E539  dec         eax  
+0000000071C1E53B  movnti      qword ptr [rcx+8],r9 
+0000000071C1E540  movnti      qword ptr [rcx],r10 
+0000000071C1E544  jne         memmove+2C0h (71C1E4F0h) 
+0000000071C1E546  sub         r8,1000h 
+0000000071C1E54D  cmp         r8,1000h 
+0000000071C1E554  jae         memmove+29Bh (71C1E4CBh) 
+0000000071C1E55A  lock or     byte ptr [rsp],0 
+0000000071C1E55F  jmp         memmove+1EEh (71C1E41Eh) 
+0000000071C1E564  int         3    
+0000000071C1E565  int         3    
+0000000071C1E566  int         3    
+0000000071C1E567  int         3    
+0000000071C1E568  int         3    
+0000000071C1E569  int         3    
+0000000071C1E56A  int         3    
+0000000071C1E56B  int         3    
+0000000071C1E56C  int         3    
+0000000071C1E56D  int         3    
+0000000071C1E56E  int         3    
+0000000071C1E56F  int         3    
+0000000071C1E570  int         3    
+0000000071C1E571  int         3    
+0000000071C1E572  int         3    
+0000000071C1E573  int         3    
+0000000071C1E574  int         3    
+0000000071C1E575  int         3    
+0000000071C1E576  nop         word ptr [rax+rax] 
+memset:
+0000000071C1E580  mov         rax,rcx 
+0000000071C1E583  cmp         r8,8 
+0000000071C1E587  jb          memset+5Ch (71C1E5DCh) 
+0000000071C1E589  movzx       edx,dl 
+0000000071C1E58C  mov         r9,101010101010101h 
+0000000071C1E596  imul        rdx,r9 
+0000000071C1E59A  cmp         r8,40h 
+0000000071C1E59E  jb          memset+3Eh (71C1E5BEh) 
+0000000071C1E5A0  neg         rcx  
+0000000071C1E5A3  and         ecx,7 
+0000000071C1E5A6  je          memset+2Eh (71C1E5AEh) 
+0000000071C1E5A8  sub         r8,rcx 
+0000000071C1E5AB  mov         qword ptr [rax],rdx 
+0000000071C1E5AE  add         rcx,rax 
+0000000071C1E5B1  mov         r9,r8 
+0000000071C1E5B4  and         r8,3Fh 
+0000000071C1E5B8  shr         r9,6 
+0000000071C1E5BC  jne         memset+77h (71C1E5F7h) 
+0000000071C1E5BE  mov         r9,r8 
+0000000071C1E5C1  and         r8,7 
+0000000071C1E5C5  shr         r9,3 
+0000000071C1E5C9  je          memset+5Ch (71C1E5DCh) 
+0000000071C1E5CB  xchg        ax,ax 
+0000000071C1E5CF  nop              
+0000000071C1E5D0  mov         qword ptr [rcx],rdx 
+0000000071C1E5D3  add         rcx,8 
+0000000071C1E5D7  dec         r9   
+0000000071C1E5DA  jne         memset+50h (71C1E5D0h) 
+0000000071C1E5DC  test        r8,r8 
+0000000071C1E5DF  je          memset+6Bh (71C1E5EBh) 
+0000000071C1E5E1  mov         byte ptr [rcx],dl 
+0000000071C1E5E3  inc         rcx  
+0000000071C1E5E6  dec         r8   
+0000000071C1E5E9  jne         memset+61h (71C1E5E1h) 
+0000000071C1E5EB  ret              
+0000000071C1E5EC  nop         dword ptr [rax] 
+0000000071C1E5F0  xchg        ax,ax 
+0000000071C1E5F4  xchg        ax,ax 
+0000000071C1E5F7  cmp         r9,1C00h 
+0000000071C1E5FE  jae         memset+0B0h (71C1E630h) 
+0000000071C1E600  mov         qword ptr [rcx],rdx 
+0000000071C1E603  mov         qword ptr [rcx+8],rdx 
+0000000071C1E607  mov         qword ptr [rcx+10h],rdx 
+0000000071C1E60B  add         rcx,40h 
+0000000071C1E60F  mov         qword ptr [rcx-28h],rdx 
+0000000071C1E613  mov         qword ptr [rcx-20h],rdx 
+0000000071C1E617  dec         r9   
+0000000071C1E61A  mov         qword ptr [rcx-18h],rdx 
+0000000071C1E61E  mov         qword ptr [rcx-10h],rdx 
+0000000071C1E622  mov         qword ptr [rcx-8],rdx 
+0000000071C1E626  jne         memset+80h (71C1E600h) 
+0000000071C1E628  jmp         memset+3Eh (71C1E5BEh) 
+0000000071C1E62A  nop         word ptr [rax+rax] 
+# THIS IS THE LINE THAT CRASHES...
+0000000071C1E630  movnti      qword ptr [rcx],rdx 
+0000000071C1E634  movnti      qword ptr [rcx+8],rdx 
+0000000071C1E639  movnti      qword ptr [rcx+10h],rdx 
+0000000071C1E63E  add         rcx,40h 
+0000000071C1E642  movnti      qword ptr [rcx-28h],rdx 
+0000000071C1E647  movnti      qword ptr [rcx-20h],rdx 
+0000000071C1E64C  dec         r9   
+0000000071C1E64F  movnti      qword ptr [rcx-18h],rdx 
+0000000071C1E654  movnti      qword ptr [rcx-10h],rdx 
+0000000071C1E659  movnti      qword ptr [rcx-8],rdx 
+0000000071C1E65E  jne         memset+0B0h (71C1E630h) 
+0000000071C1E660  lock or     byte ptr [rsp],0 
+0000000071C1E665  jmp         memset+3Eh (71C1E5BEh) 
+0000000071C1E66A  int         3    
+0000000071C1E66B  int         3    
+0000000071C1E66C  int         3    
+0000000071C1E66D  int         3    
+0000000071C1E66E  int         3    
+0000000071C1E66F  int         3    
+0000000071C1E670  int         3    
+0000000071C1E671  int         3    
+0000000071C1E672  int         3    
+0000000071C1E673  int         3    
+0000000071C1E674  int         3    
+0000000071C1E675  int         3    
+0000000071C1E676  nop         word ptr [rax+rax] 
+strcat:
+0000000071C1E680  mov         r11,rcx 
+0000000071C1E683  test        cl,7 
+0000000071C1E686  je          strcat+1Ah (71C1E69Ah) 
+0000000071C1E688  mov         al,byte ptr [rcx] 
+0000000071C1E68A  test        al,al 
+0000000071C1E68C  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E692  inc         rcx  
+0000000071C1E695  test        cl,7 
+0000000071C1E698  jne         strcat+8 (71C1E688h) 
+0000000071C1E69A  mov         rax,qword ptr [rcx] 
+0000000071C1E69D  mov         r10,rax 
+0000000071C1E6A0  mov         r9,7EFEFEFEFEFEFEFFh 
+0000000071C1E6AA  add         r9,r10 
+0000000071C1E6AD  xor         r10,0FFFFFFFFFFFFFFFFh 
+0000000071C1E6B1  xor         r10,r9 
+0000000071C1E6B4  add         rcx,8 
+0000000071C1E6B8  mov         r9,8101010101010100h 
+0000000071C1E6C2  test        r9,r10 
+0000000071C1E6C5  je          strcat+1Ah (71C1E69Ah) 
+0000000071C1E6C7  sub         rcx,8 
+0000000071C1E6CB  test        al,al 
+0000000071C1E6CD  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E6CF  inc         rcx  
+0000000071C1E6D2  test        ah,ah 
+0000000071C1E6D4  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E6D6  inc         rcx  
+0000000071C1E6D9  shr         rax,10h 
+0000000071C1E6DD  test        al,al 
+0000000071C1E6DF  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E6E1  inc         rcx  
+0000000071C1E6E4  test        ah,ah 
+0000000071C1E6E6  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E6E8  inc         rcx  
+0000000071C1E6EB  shr         rax,10h 
+0000000071C1E6EF  test        al,al 
+0000000071C1E6F1  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E6F3  inc         rcx  
+0000000071C1E6F6  test        ah,ah 
+0000000071C1E6F8  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E6FA  inc         rcx  
+0000000071C1E6FD  shr         eax,10h 
+0000000071C1E700  test        al,al 
+0000000071C1E702  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E704  inc         rcx  
+0000000071C1E707  test        ah,ah 
+0000000071C1E709  je          ___entry_from_strcat_in_strcpy (71C1E723h) 
+0000000071C1E70B  inc         rcx  
+0000000071C1E70E  jmp         strcat+1Ah (71C1E69Ah) 
+0000000071C1E710  int         3    
+0000000071C1E711  int         3    
+0000000071C1E712  int         3    
+0000000071C1E713  int         3    
+0000000071C1E714  int         3    
+0000000071C1E715  int         3    
+0000000071C1E716  nop         word ptr [rax+rax] 
+strcpy:
+0000000071C1E720  mov         r11,rcx 
+___entry_from_strcat_in_strcpy:
+0000000071C1E723  sub         rcx,rdx 
+0000000071C1E726  test        dl,7 
+0000000071C1E729  je          ___entry_from_strcat_in_strcpy+27h (71C1E74Ah) 
+0000000071C1E72B  mov         al,byte ptr [rdx] 
+0000000071C1E72D  mov         byte ptr [rcx+rdx],al 
+0000000071C1E730  test        al,al 
+0000000071C1E732  je          ___entry_from_strcat_in_strcpy+1Bh (71C1E73Eh) 
+0000000071C1E734  inc         rdx  
+0000000071C1E737  test        dl,7 
+0000000071C1E73A  jne         ___entry_from_strcat_in_strcpy+8 (71C1E72Bh) 
+0000000071C1E73C  jmp         ___entry_from_strcat_in_strcpy+27h (71C1E74Ah) 
+0000000071C1E73E  mov         rax,r11 
+0000000071C1E741  ret              
+0000000071C1E742  mov         qword ptr [rcx+rdx],rax 
+0000000071C1E746  add         rdx,8 
+0000000071C1E74A  mov         rax,qword ptr [rdx] 
+0000000071C1E74D  mov         r9,7EFEFEFEFEFEFEFFh 
+0000000071C1E757  add         r9,rax 
+0000000071C1E75A  mov         r10,rax 
+0000000071C1E75D  xor         r10,0FFFFFFFFFFFFFFFFh 
+0000000071C1E761  xor         r10,r9 
+0000000071C1E764  mov         r9,8101010101010100h 
+0000000071C1E76E  test        r9,r10 
+0000000071C1E771  je          ___entry_from_strcat_in_strcpy+1Fh (71C1E742h) 
+0000000071C1E773  test        al,al 
+0000000071C1E775  mov         byte ptr [rcx+rdx],al 
+0000000071C1E778  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E77A  inc         rdx  
+0000000071C1E77D  test        ah,ah 
+0000000071C1E77F  mov         byte ptr [rcx+rdx],ah 
+0000000071C1E782  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E784  inc         rdx  
+0000000071C1E787  shr         rax,10h 
+0000000071C1E78B  test        al,al 
+0000000071C1E78D  mov         byte ptr [rcx+rdx],al 
+0000000071C1E790  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E792  inc         rdx  
+0000000071C1E795  test        ah,ah 
+0000000071C1E797  mov         byte ptr [rcx+rdx],ah 
+0000000071C1E79A  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E79C  inc         rdx  
+0000000071C1E79F  shr         rax,10h 
+0000000071C1E7A3  test        al,al 
+0000000071C1E7A5  mov         byte ptr [rcx+rdx],al 
+0000000071C1E7A8  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E7AA  inc         rdx  
+0000000071C1E7AD  test        ah,ah 
+0000000071C1E7AF  mov         byte ptr [rcx+rdx],ah 
+0000000071C1E7B2  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E7B4  inc         rdx  
+0000000071C1E7B7  shr         eax,10h 
+0000000071C1E7BA  test        al,al 
+0000000071C1E7BC  mov         byte ptr [rcx+rdx],al 
+0000000071C1E7BF  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E7C1  inc         rdx  
+0000000071C1E7C4  test        ah,ah 
+0000000071C1E7C6  mov         byte ptr [rcx+rdx],ah 
+0000000071C1E7C9  je          ___entry_from_strcat_in_strcpy+0B0h (71C1E7D3h) 
+0000000071C1E7CB  inc         rdx  
+0000000071C1E7CE  jmp         ___entry_from_strcat_in_strcpy+27h (71C1E74Ah) 
+0000000071C1E7D3  mov         rax,r11 
+0000000071C1E7D6  ret              
+0000000071C1E7D7  int         3    
+0000000071C1E7D8  int         3    
+0000000071C1E7D9  int         3    
+0000000071C1E7DA  int         3    
+0000000071C1E7DB  int         3    
+0000000071C1E7DC  int         3    
+0000000071C1E7DD  int         3    
+0000000071C1E7DE  int         3    
+0000000071C1E7DF  int         3    
+0000000071C1E7E0  int         3    
+0000000071C1E7E1  int         3    
+0000000071C1E7E2  int         3    
+0000000071C1E7E3  int         3    
+0000000071C1E7E4  int         3    
+0000000071C1E7E5  int         3    
+0000000071C1E7E6  nop         word ptr [rax+rax] 
+strcmp:
+0000000071C1E7F0  sub         rdx,rcx 
+0000000071C1E7F3  mov         r9,rdx 
+0000000071C1E7F6  test        cl,7 
+0000000071C1E7F9  je          strcmp+26h (71C1E816h) 
+0000000071C1E7FB  mov         al,byte ptr [rcx] 
+0000000071C1E7FD  mov         dl,byte ptr [rcx+r9] 
+0000000071C1E801  cmp         al,dl 
+0000000071C1E803  jne         strcmp+6Bh (71C1E85Bh) 
+0000000071C1E805  inc         rcx  
+0000000071C1E808  test        al,al 
+0000000071C1E80A  je          strcmp+73h (71C1E863h) 
+0000000071C1E80C  test        rcx,7 
+0000000071C1E813  jne         strcmp+0Bh (71C1E7FBh) 
+0000000071C1E815  nop              
+0000000071C1E816  mov         r11,8101010101010100h 
+0000000071C1E820  lea         rdx,[rcx+r9] 
+0000000071C1E824  and         dx,0FFFh 
+0000000071C1E829  cmp         dx,0FF8h 
+0000000071C1E82E  ja          strcmp+0Bh (71C1E7FBh) 
+0000000071C1E830  mov         rax,qword ptr [rcx] 
+0000000071C1E833  mov         rdx,qword ptr [rcx+r9] 
+0000000071C1E837  cmp         rax,rdx 
+0000000071C1E83A  jne         strcmp+0Bh (71C1E7FBh) 
+0000000071C1E83C  mov         r10,7EFEFEFEFEFEFEFFh 
+0000000071C1E846  add         r10,rdx 
+0000000071C1E849  xor         rax,0FFFFFFFFFFFFFFFFh 
+0000000071C1E84D  add         rcx,8 
+0000000071C1E851  xor         rax,r10 
+0000000071C1E854  test        r11,rax 
+0000000071C1E857  je          strcmp+30h (71C1E820h) 
+0000000071C1E859  jmp         strcmp+7Ah (71C1E86Ah) 
+0000000071C1E85B  sbb         rax,rax 
+0000000071C1E85E  sbb         rax,0FFFFFFFFFFFFFFFFh 
+0000000071C1E862  ret              
+0000000071C1E863  xor         eax,eax 
+0000000071C1E865  ret              
+0000000071C1E866  xchg        ax,ax 
+0000000071C1E86A  test        dl,dl 
+0000000071C1E86C  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E86E  test        dh,dh 
+0000000071C1E870  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E872  shr         rdx,10h 
+0000000071C1E876  test        dl,dl 
+0000000071C1E878  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E87A  test        dh,dh 
+0000000071C1E87C  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E87E  shr         rdx,10h 
+0000000071C1E882  test        dl,dl 
+0000000071C1E884  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E886  test        dh,dh 
+0000000071C1E888  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E88A  shr         edx,10h 
+0000000071C1E88D  test        dl,dl 
+0000000071C1E88F  je          strcmp+0A5h (71C1E895h) 
+0000000071C1E891  test        dh,dh 
+0000000071C1E893  jne         strcmp+30h (71C1E820h) 
+0000000071C1E895  xor         eax,eax 
+0000000071C1E897  ret              
+0000000071C1E898  sbb         rax,rax 
+0000000071C1E89B  sbb         rax,0FFFFFFFFFFFFFFFFh 
+0000000071C1E89F  ret              
+0000000071C1E8A0  int         3    
+0000000071C1E8A1  int         3    
+0000000071C1E8A2  int         3    
+0000000071C1E8A3  int         3    
+0000000071C1E8A4  int         3    
+0000000071C1E8A5  int         3    
+0000000071C1E8A6  nop         word ptr [rax+rax] 
+strlen:
+0000000071C1E8B0  mov         rax,rcx 
+0000000071C1E8B3  neg         rcx  
+0000000071C1E8B6  test        rax,7 
+0000000071C1E8BC  je          strlen+1Dh (71C1E8CDh) 
+0000000071C1E8BE  xchg        ax,ax 
+0000000071C1E8C0  mov         dl,byte ptr [rax] 
+0000000071C1E8C2  inc         rax  
+0000000071C1E8C5  test        dl,dl 
+0000000071C1E8C7  je          strlen+78h (71C1E928h) 
+0000000071C1E8C9  test        al,7 
+0000000071C1E8CB  jne         strlen+10h (71C1E8C0h) 
+0000000071C1E8CD  mov         r8,7EFEFEFEFEFEFEFFh 
+0000000071C1E8D7  mov         r11,8101010101010100h 
+0000000071C1E8E1  mov         rdx,qword ptr [rax] 
+0000000071C1E8E4  mov         r9,r8 
+0000000071C1E8E7  add         rax,8 
+0000000071C1E8EB  add         r9,rdx 
+0000000071C1E8EE  not         rdx  
+0000000071C1E8F1  xor         rdx,r9 
+0000000071C1E8F4  and         rdx,r11 
+0000000071C1E8F7  je          strlen+31h (71C1E8E1h) 
+0000000071C1E8F9  mov         rdx,qword ptr [rax-8] 
+0000000071C1E8FD  test        dl,dl 
+0000000071C1E8FF  je          strlen+0A2h (71C1E952h) 
+0000000071C1E901  test        dh,dh 
+0000000071C1E903  je          strlen+9Ch (71C1E94Ch) 
+0000000071C1E905  shr         rdx,10h 
+0000000071C1E909  test        dl,dl 
+0000000071C1E90B  je          strlen+96h (71C1E946h) 
+0000000071C1E90D  test        dh,dh 
+0000000071C1E90F  je          strlen+90h (71C1E940h) 
+0000000071C1E911  shr         rdx,10h 
+0000000071C1E915  test        dl,dl 
+0000000071C1E917  je          strlen+8Ah (71C1E93Ah) 
+0000000071C1E919  test        dh,dh 
+0000000071C1E91B  je          strlen+84h (71C1E934h) 
+0000000071C1E91D  shr         edx,10h 
+0000000071C1E920  test        dl,dl 
+0000000071C1E922  je          strlen+7Eh (71C1E92Eh) 
+0000000071C1E924  test        dh,dh 
+0000000071C1E926  jne         strlen+31h (71C1E8E1h) 
+0000000071C1E928  lea         rax,[rcx+rax-1] 
+0000000071C1E92D  ret              
+0000000071C1E92E  lea         rax,[rcx+rax-2] 
+0000000071C1E933  ret              
+0000000071C1E934  lea         rax,[rcx+rax-3] 
+0000000071C1E939  ret              
+0000000071C1E93A  lea         rax,[rcx+rax-4] 
+0000000071C1E93F  ret              
+0000000071C1E940  lea         rax,[rcx+rax-5] 
+0000000071C1E945  ret              
+0000000071C1E946  lea         rax,[rcx+rax-6] 
+0000000071C1E94B  ret              
+0000000071C1E94C  lea         rax,[rcx+rax-7] 
+0000000071C1E951  ret              
+0000000071C1E952  lea         rax,[rcx+rax-8] 
+0000000071C1E957  ret              
+0000000071C1E958  int         3    
+0000000071C1E959  int         3    
+0000000071C1E95A  int         3    
+0000000071C1E95B  int         3    
+0000000071C1E95C  int         3    
+0000000071C1E95D  int         3    
+0000000071C1E95E  int         3    
+0000000071C1E95F  int         3    
+0000000071C1E960  int         3    
+0000000071C1E961  int         3    
+0000000071C1E962  int         3    
+0000000071C1E963  int         3    
+0000000071C1E964  int         3    
+0000000071C1E965  int         3    
+0000000071C1E966  nop         word ptr [rax+rax] 
+strncat:
+0000000071C1E970  mov         r11,rcx 
+0000000071C1E973  or          r8,r8 
+0000000071C1E976  je          strncat
