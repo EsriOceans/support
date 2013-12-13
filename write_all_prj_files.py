@@ -16,7 +16,6 @@ arc_version = arcpy.GetInstallInfo()['Version']
 # change this path if you'd like the spatial references to be written 
 # out elsewhere, this is the default directory for .prj files.
 output_base = '{0}\\ESRI\\Desktop{1}\\ArcMap\\Coordinate Systems'.format(app_data_path, arc_version)
-if 
 create_path(output_base)
 
 for sr_name in arcpy.ListSpatialReferences():
