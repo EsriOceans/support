@@ -4,6 +4,8 @@ import os
 # minor refactor of issue reported by steveoh here:
 #  https://gist.github.com/steveoh/02a1896b5af4632ebed9
 
+arcpy.env.overwriteOutput = True
+
 test_location = 'c:\\temp'
 gdb_name = 'inspecific_error'
 gdb_path = os.path.join(test_location, gdb_name) + '.gdb'
