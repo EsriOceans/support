@@ -4,6 +4,11 @@ import os
 # minor refactor of issue reported by steveoh here:
 #  https://gist.github.com/steveoh/02a1896b5af4632ebed9
 
+"""
+Note: this issue is now logged as NIM103815: Data Access cursors should 
+return the names of invalid columns in addition to the RuntimeError that results 
+from creating a cursor object with field names that do not exist in the source table.
+"""
 arcpy.env.overwriteOutput = True
 
 test_location = 'c:\\temp'
