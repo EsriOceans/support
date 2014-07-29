@@ -4,8 +4,8 @@ import sys
 import platform
 
 # Before going any further, insure that we're running in 64-bit mode (MUST be
-# either in background process, or directly run from the Python interpreter 
-# bundled with Background Processing).
+# either in background process, directly run from the Python interpreter 
+# bundled with Background Processing, or in the pure 64-bit environment of ProApp).
 bits = platform.architecture()[0]
 if bits == '64bit':
     print("64-bit Python detected, continuing. Machine must have 4GB+ of " + \
