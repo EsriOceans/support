@@ -32,10 +32,10 @@ try:
         for row in cursor:
             continue
 except RuntimeError as e:
-    print "We've now hit a runtime error, due to the missing column " + \
+    print("We've now hit a runtime error, due to the missing column " + \
             "`this_one`, but we don't actually bubble up what the missing " + \
-            " is named."
-    print e
+            " is named.")
+    print(e)
 
 # These steps are necessary to figure out which column(s) are missing
 #
@@ -48,4 +48,4 @@ my_silly_input = set(fouled_up_fields)
 
 missing = my_silly_input - actual
 
-print 'the fouled up columns are {}'.format(missing)
+print('the fouled up columns are {}'.format(missing))
