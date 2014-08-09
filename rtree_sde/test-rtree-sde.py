@@ -4,9 +4,22 @@ import platform
 # confirm we're on 64-bit
 print platform.architecture()
 
-import arcpy
-import rtree
 
+import arcgisscripting
+gp = arcgisscripting.create(9.3)
+
+print gp.ProductInfo() # Prints NotInitialized
+
+print gp.CheckProduct("ArcView")
+gp.SetProduct("ArcEditor")
+print gp.ProductInfo() # Prints ArcView 
+"""
+import arcview
+import arcpy
+license_level = arcpy.ProductInfo()
+print license_level
+"""
+import arcpy
 sde_path = os.path.join(os.path.dirname(__file__), 'sde_conn.sde')
 sde_conn = arcpy.ArcSDESQLExecute(sde_path)
 
