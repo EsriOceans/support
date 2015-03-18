@@ -1,0 +1,440 @@
+{
+  "Response": {
+        "ListOfServiceRequest": {
+            "ServiceRequest": [
+                {
+                    "ActionTaken": "", 
+                    "AddressVerified": "Y", 
+                    "Anonymous": "N", 
+                    "AssignTo": "EV", 
+                    "Assignee": "", 
+                    "CCBPremiseType": "", 
+                    "ClosedDate": "", 
+                    "ContainerBlackCount": "", 
+                    "ContainerBlueCount": "", 
+                    "ContainerBrownCount": "", 
+                    "CreatedByUserLogin": "MYLATHREEONEONE", 
+                    "CreatedDate": "02/17/2015 16:53:25", 
+                    "CustomerAccessNumber": "", 
+                    "Email": "mylathreeoneone@gmail.com", 
+                    "FirstName": "Myla", 
+                    "HomePhone": "2131234567", 
+                    "IntegrationId": "02172015165417667", 
+                    "LADWPAccountNo": "", 
+                    "Language": "", 
+                    "LastName": "Threeoneone", 
+                    "Latitude": "34.176277", 
+                    "ListOfAuditTrailItem2": {
+                        "AuditTrailItem2": [
+                            {
+                                "Date": "02/27/2015 11:45:46", 
+                                "EmployeeLogin": "EAIBOS", 
+                                "Field": "Status", 
+                                "NewValue": "Closed", 
+                                "OldValue": "Open"
+                            }, 
+                            {
+                                "Date": "02/27/2015 11:45:46", 
+                                "EmployeeLogin": "EAIBOS", 
+                                "Field": "Updated By User", 
+                                "NewValue": "EAIBOS", 
+                                "OldValue": "MYLATHREEONEONE"
+                            }
+                        ]
+                    }, 
+                    "ListOfChildServiceRequest": {}, 
+                    "ListOfLa311BarricadeRemoval": {}, 
+                    "ListOfLa311BeesOrBeehive": {}, 
+                    "ListOfLa311BillingCsscAdjustment": {}, 
+                    "ListOfLa311BillingEccAdjustment": {}, 
+                    "ListOfLa311BillingRsscAdjustment": {}, 
+                    "ListOfLa311BillingRsscExemption": {}, 
+                    "ListOfLa311BrushItemsPickup": {}, 
+                    "ListOfLa311BulkyItem": {}, 
+                    "ListOfLa311BusPadLanding": {}, 
+                    "ListOfLa311Containers": {}, 
+                    "ListOfLa311CurbRepair": {}, 
+                    "ListOfLa311DeadAnimalRemoval": {}, 
+                    "ListOfLa311DocumentLog": {}, 
+                    "ListOfLa311ElectronicWaste": {
+                        "La311ElectronicWaste": [
+                            {
+                                "ActiveStatus": "", 
+                                "CollectionLocation": "Gated Community/Multifamily Dw", 
+                                "DriverFirstName": "Moody", 
+                                "DriverLastName": "Frederick10/09/2014", 
+                                "ElectronicWestType": "Microwaves", 
+                                "GatedCommunityMultifamilyDwelling": "Curb", 
+                                "IllegalDumpCollectionLoc": "", 
+                                "IllegallyDumped": "N", 
+                                "ItemCount": "3", 
+                                "LastUpdatedBy": "", 
+                                "MobileHomeSpace": "", 
+                                "Name": "021720151654176711", 
+                                "OtherElectronicWestType": "", 
+                                "ServiceDateRendered": "", 
+                                "TruckNo": "SC Truck 10", 
+                                "Type": "Electronic Waste"
+                            }, 
+                            {
+                                "ActiveStatus": "", 
+                                "CollectionLocation": "Gated Community/Multifamily Dw", 
+                                "DriverFirstName": "Moody", 
+                                "DriverLastName": "Frederick10/09/2014", 
+                                "ElectronicWestType": "Televisions (Any Size)", 
+                                "GatedCommunityMultifamilyDwelling": "Curb", 
+                                "IllegalDumpCollectionLoc": "", 
+                                "IllegallyDumped": "N", 
+                                "ItemCount": "6", 
+                                "LastUpdatedBy": "", 
+                                "MobileHomeSpace": "", 
+                                "Name": "021720151654176722", 
+                                "OtherElectronicWestType": "", 
+                                "ServiceDateRendered": "", 
+                                "TruckNo": "SC Truck 10SC Truck 10", 
+                                "Type": "Electronic Waste"
+                            }, 
+                            {
+                                "ActiveStatus": "", 
+                                "CollectionLocation": "Gated Community/Multifamily Dw", 
+                                "DriverFirstName": "Moody", 
+                                "DriverLastName": "Frederick10/09/2014", 
+                                "ElectronicWestType": "VCR/DVD Players", 
+                                "GatedCommunityMultifamilyDwelling": "Curb", 
+                                "IllegalDumpCollectionLoc": "", 
+                                "IllegallyDumped": "N", 
+                                "ItemCount": "1", 
+                                "LastUpdatedBy": "", 
+                                "MobileHomeSpace": "", 
+                                "Name": "021720151654176723", 
+                                "OtherElectronicWestType": "", 
+                                "ServiceDateRendered": "", 
+                                "TruckNo": "SC Truck 10SC Truck 10", 
+                                "Type": "Electronic Waste"
+                            }
+                        ]
+                    }, 
+                    "ListOfLa311Flooding": {}, 
+                    "ListOfLa311GeneralStreetInspection": {}, 
+                    "ListOfLa311GenericBc": {
+                        "La311GenericBc": [
+                            {
+                                "ATTRIB_08": "N", 
+                                "ATTRIB_16": "", 
+                                "ListOfLa311GenericbcAuditTrail": {
+                                    "La311GenericbcAuditTrail": [
+                                        {
+                                            "Date": "02/27/2015 15:15:28", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver Last Name", 
+                                            "NewValue": "Frederick10/09/2014", 
+                                            "OldValue": "Frederick"
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver First Name", 
+                                            "NewValue": "Moody", 
+                                            "OldValue": ""
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver Last Name", 
+                                            "NewValue": "Frederick", 
+                                            "OldValue": ""
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Truck No", 
+                                            "NewValue": "SC Truck 10", 
+                                            "OldValue": ""
+                                        }
+                                    ]
+                                }, 
+                                "NAME": "021720151654176711", 
+                                "PAR_ROW_ID": "1-24QH7", 
+                                "ROW_ID": "1-24QHR", 
+                                "TYPE": "Electronic Waste"
+                            }, 
+                            {
+                                "ATTRIB_08": "N", 
+                                "ATTRIB_16": "", 
+                                "ListOfLa311GenericbcAuditTrail": {
+                                    "La311GenericbcAuditTrail": [
+                                        {
+                                            "Date": "02/27/2015 15:15:28", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver Last Name", 
+                                            "NewValue": "Frederick10/09/2014", 
+                                            "OldValue": "Frederick"
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver First Name", 
+                                            "NewValue": "Moody", 
+                                            "OldValue": ""
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver Last Name", 
+                                            "NewValue": "Frederick", 
+                                            "OldValue": ""
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Truck No", 
+                                            "NewValue": "SC Truck 10SC Truck 10", 
+                                            "OldValue": ""
+                                        }
+                                    ]
+                                }, 
+                                "NAME": "021720151654176722", 
+                                "PAR_ROW_ID": "1-24QH7", 
+                                "ROW_ID": "1-24QHS", 
+                                "TYPE": "Electronic Waste"
+                            }, 
+                            {
+                                "ATTRIB_08": "N", 
+                                "ATTRIB_16": "", 
+                                "ListOfLa311GenericbcAuditTrail": {
+                                    "La311GenericbcAuditTrail": [
+                                        {
+                                            "Date": "02/27/2015 15:15:28", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver Last Name", 
+                                            "NewValue": "Frederick10/09/2014", 
+                                            "OldValue": "Frederick"
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver First Name", 
+                                            "NewValue": "Moody", 
+                                            "OldValue": ""
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Driver Last Name", 
+                                            "NewValue": "Frederick", 
+                                            "OldValue": ""
+                                        }, 
+                                        {
+                                            "Date": "02/27/2015 11:45:46", 
+                                            "EmployeeLogin": "EAIBOS", 
+                                            "Field": "Truck No", 
+                                            "NewValue": "SC Truck 10SC Truck 10", 
+                                            "OldValue": ""
+                                        }
+                                    ]
+                                }, 
+                                "NAME": "021720151654176723", 
+                                "PAR_ROW_ID": "1-24QH7", 
+                                "ROW_ID": "1-24QHT", 
+                                "TYPE": "Electronic Waste"
+                            }, 
+                            {
+                                "ATTRIB_08": "", 
+                                "ATTRIB_16": "", 
+                                "ListOfLa311GenericbcAuditTrail": {}, 
+                                "NAME": "02172015165417667100", 
+                                "PAR_ROW_ID": "1-24QH7", 
+                                "ROW_ID": "1-24QHU", 
+                                "TYPE": "GIS"
+                            }, 
+                            {
+                                "ATTRIB_08": "", 
+                                "ATTRIB_16": "", 
+                                "ListOfLa311GenericbcAuditTrail": {}, 
+                                "NAME": "021720151654176671", 
+                                "PAR_ROW_ID": "1-24QH7", 
+                                "ROW_ID": "1-24QHQ", 
+                                "TYPE": "SR Photo ID"
+                            }
+                        ]
+                    }, 
+                    "ListOfLa311GisLayer": {
+                        "La311GisLayer": [
+                            {
+                                "A_Call_No": "", 
+                                "Area": "0", 
+                                "BOSRadioHolderName": "", 
+                                "CommunityPlanningArea": "", 
+                                "Day": "THURSDAY", 
+                                "DirectionSuffix": "", 
+                                "DistrictAbbr": "", 
+                                "DistrictName": "EV", 
+                                "DistrictNumber": "", 
+                                "DistrictOffice": "", 
+                                "Fraction": "", 
+                                "LastUpdatedBy": "", 
+                                "Name": "02172015165417667100", 
+                                "R_Call_No": "", 
+                                "SectionId": "", 
+                                "ShortDay": "Thu", 
+                                "StreetFrom": "", 
+                                "StreetLightId": "", 
+                                "StreetLightStatus": "", 
+                                "StreetTo": "", 
+                                "Type": "GIS", 
+                                "Y_Call_No": ""
+                            }
+                        ]
+                    }, 
+                    "ListOfLa311GraffitiRemoval": {}, 
+                    "ListOfLa311GuardWarningRailMaintenance": {}, 
+                    "ListOfLa311GutterRepair": {}, 
+                    "ListOfLa311HomelessEncampment": {}, 
+                    "ListOfLa311IllegalAutoRepair": {}, 
+                    "ListOfLa311IllegalConstruction": {}, 
+                    "ListOfLa311IllegalConstructionFence": {}, 
+                    "ListOfLa311IllegalDischargeOfWater": {}, 
+                    "ListOfLa311IllegalDumpingInProgress": {}, 
+                    "ListOfLa311IllegalDumpingPickup": {}, 
+                    "ListOfLa311IllegalExcavation": {}, 
+                    "ListOfLa311IllegalSignRemoval": {}, 
+                    "ListOfLa311IllegalVending": {}, 
+                    "ListOfLa311InformationOnly": {}, 
+                    "ListOfLa311LandMudSlide": {}, 
+                    "ListOfLa311LeafBlowerViolation": {}, 
+                    "ListOfLa311ManualPickup": {}, 
+                    "ListOfLa311MedianIslandMaintenance": {}, 
+                    "ListOfLa311MetalHouseholdAppliancesPickup": {}, 
+                    "ListOfLa311MoveInMoveOut": {}, 
+                    "ListOfLa311MultipleStreetlightIssue": {}, 
+                    "ListOfLa311NewsRackViolation": {}, 
+                    "ListOfLa311Obstructions": {}, 
+                    "ListOfLa311Other": {}, 
+                    "ListOfLa311OvergrownVegetationPlants": {}, 
+                    "ListOfLa311PalmFrondsDown": {}, 
+                    "ListOfLa311Pothole": {}, 
+                    "ListOfLa311Resurfacing": {}, 
+                    "ListOfLa311SanitationBillingBif": {}, 
+                    "ListOfLa311SanitationBillingCssc": {}, 
+                    "ListOfLa311SanitationBillingEcc": {}, 
+                    "ListOfLa311SanitationBillingInquiry": {}, 
+                    "ListOfLa311SanitationBillingLifeline": {}, 
+                    "ListOfLa311SanitationBillingRssc": {}, 
+                    "ListOfLa311SanitationBillingSrf": {}, 
+                    "ListOfLa311ServiceNotComplete": {}, 
+                    "ListOfLa311ServiceRequestNotes": {
+                        "La311ServiceRequestNotes": [
+                            {
+                                "Comment": "So glad to get rid of this old junk.  Thanks.", 
+                                "CommentType": "External", 
+                                "CreatedByUser": "MYLATHREEONEONE", 
+                                "CreatedDate": "02/17/2015 16:53:26", 
+                                "Date1": "", 
+                                "Date2": "", 
+                                "Date3": "", 
+                                "FeedbackSRType": "", 
+                                "IntegrationId": "021720151654176662", 
+                                "IsSrNoAvailable": "", 
+                                "ListOfLa311SrNotesAuditTrail": {}, 
+                                "Notification": "N", 
+                                "Text1": ""
+                            }, 
+                            {
+                                "Comment": "Out on the sidewalk near the curb.  Hopefully it is still there.", 
+                                "CommentType": "Address Comments", 
+                                "CreatedByUser": "MYLATHREEONEONE", 
+                                "CreatedDate": "02/17/2015 16:53:26", 
+                                "Date1": "", 
+                                "Date2": "", 
+                                "Date3": "", 
+                                "FeedbackSRType": "", 
+                                "IntegrationId": "021720151654176661", 
+                                "IsSrNoAvailable": "", 
+                                "ListOfLa311SrNotesAuditTrail": {}, 
+                                "Notification": "N", 
+                                "Text1": ""
+                            }
+                        ]
+                    }, 
+                    "ListOfLa311SidewalkRepair": {}, 
+                    "ListOfLa311SingleStreetlightIssue": {}, 
+                    "ListOfLa311SrPhotoId": {
+                        "La311SrPhotoId": [
+                            {
+                                "ActiveStatus": "", 
+                                "LastUpdatedBy": "", 
+                                "Name": "021720151654176671", 
+                                "PhotoId": "https://myla311.lacity.org/portal/docview?id=04b8ba678fe21d32b05673eb9ad7711b", 
+                                "Type": "SR Photo ID"
+                            }
+                        ]
+                    }, 
+                    "ListOfLa311StreetSweeping": {}, 
+                    "ListOfLa311StreetTreeInspection": {}, 
+                    "ListOfLa311StreetTreeViolations": {}, 
+                    "ListOfLa311SubscribeDuplicateSr": {}, 
+                    "ListOfLa311TablesAndChairsObstructing": {}, 
+                    "ListOfLa311TreeEmergency": {}, 
+                    "ListOfLa311TreeObstruction": {}, 
+                    "ListOfLa311TreePermits": {}, 
+                    "ListOfLa311WeedAbatementForPrivateParcels": {}, 
+                    "LoginUser": "", 
+                    "Longitude": "-118.455249", 
+                    "MobilOS": "", 
+                    "NewContactEmail": "", 
+                    "NewContactFirstName": "", 
+                    "NewContactLastName": "", 
+                    "NewContactPhone": "", 
+                    "Owner": "BOS", 
+                    "ParentSRLinkDate": "", 
+                    "ParentSRLinkUser": "", 
+                    "ParentSRNumber": "", 
+                    "ParentSRStatus": "", 
+                    "ParentSRType": "", 
+                    "Priority": "Normal", 
+                    "ReasonCode": "", 
+                    "RescheduleCounter": "", 
+                    "ResolutionCode": "SW", 
+                    "SRAddress": "5810 N WILLIS AVE, 91411", 
+                    "SRAddressName": "", 
+                    "SRAreaPlanningCommission": "South Valley APC", 
+                    "SRAreaPlanningCommissionId": "3", 
+                    "SRCity": "", 
+                    "SRCommunityPoliceStation": "VALLEY BUREAU", 
+                    "SRCommunityPoliceStationAPREC": "VAN NUYS", 
+                    "SRCommunityPoliceStationPREC": "9", 
+                    "SRCouncilDistrictMember": "Tom LaBonge", 
+                    "SRCouncilDistrictNo": "4", 
+                    "SRCrossStreet": "", 
+                    "SRDirection": "N", 
+                    "SRHouseNumber": "5810", 
+                    "SRNeighborhoodCouncilId": "20", 
+                    "SRNeighborhoodCouncilName": "VAN NUYS NC", 
+                    "SRNumber": "1-3580171", 
+                    "SRStreetName": "WILLIS", 
+                    "SRSuffix": "AVE", 
+                    "SRTBColumn": "J", 
+                    "SRTBMapGridPage": "561", 
+                    "SRTBRow": "1", 
+                    "SRType": "Electronic Waste", 
+                    "SRUnitNumber": "5810", 
+                    "SRXCoordinate": "6423983", 
+                    "SRYCoordinate": "1886848", 
+                    "ServiceDate": "02/19/2015 00:00:00", 
+                    "Source": "", 
+                    "SourceofRequestCouncil": "", 
+                    "Status": "Closed", 
+                    "UpdatedByUserLogin": "EAIBOS", 
+                    "UpdatedDate": "02/27/2015 15:14:22", 
+                    "Zipcode": "91411"
+                }
+            ]
+        }, 
+        "NumOutputObjects": "1"
+    }, 
+    "status": {
+        "cause": "", 
+        "code": 311, 
+        "message": "Service Request Successfully Queried."
+    }
+}
