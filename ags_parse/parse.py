@@ -23,5 +23,8 @@ with open('test.ags', 'rb') as f:
     # offsets and write them out individually. Or as a hack:
 
     # the 'URL' result in this file:
-    print(filtered[144:178])
-    # 'http://rags2k:6080/arcgis/services'
+    start = filtered.find('URL\x08') + 5
+    # start up to the first '\n':
+    end = start + filtered[start:].find('\n')
+    url_string = filtered[start:end]
+    print(url_string)
