@@ -40,3 +40,15 @@ nosetests.xml
 
 # sde connections
 *.sde
+
+# local cruft
+requests-token/req-with.py
+raster-to-numpy-64bit/debugging-in-pro-app.txt
+raster-to-numpy-64bit/notes.txt
+raster-to-numpy-64bit/python_rastertonumpyarray_crash.dmp
+raster-to-numpy-64bit/raster-to-numpy-64bit.py.detailed
+missing-column/attempt.txt
+missing-column/repeat.txt
+missing-column/input.txt
+no_share_as/
+fabba02ee795b7b6083b/
