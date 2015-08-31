@@ -11,7 +11,7 @@ The best way I've found to to handle this consistently in Py2+3, Pro+ArcMap is a
 
 2. Decode the resulting string as 'utf-8', even though it is really encoded as cp1252, and ignore any unknown characters in the output stream:    
   ```python
-  prcpy.AddMessage(t.decode("utf-8", errors="ignore"))
+  arcpy.AddMessage(t.decode("utf-8", errors="ignore"))
   ```
 
 Note that if you set `errors="replace"` instead, you'll get two error characters: the original entry from the cp1252 instance, and a second one from the utf-8 error. 
