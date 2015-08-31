@@ -5,7 +5,7 @@ The best way I've found to to handle this consistently in Py2+3, Pro+ArcMap is a
 
 1. convert the string to cp1252, replacing unknown characters with the cp1252 unknown symbol:
   ```python
-    s = "票西表島構内評豹掛川日本迎票府怖扶敷".encode("windows-1252", "replace")
+  s = "票西表島構内評豹掛川日本迎票府怖扶敷".encode("windows-1252", "replace")
   ```
   This will mostly handle Unicode strings, though some codepoints are missing, such as ,[川](https://en.wiktionary.org/wiki/%E5%B7%9D), codepoint 0x5DDD, or [kanxi radical 47](https://en.wikipedia.org/wiki/Radical_47) (river), which is part of the [Kangxi radical](https://en.wikipedia.org/wiki/Kangxi_radical) system.
 
