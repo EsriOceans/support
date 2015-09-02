@@ -25,6 +25,10 @@ param_1.value = "票西表島構内評豹掛川日本迎票府怖扶敷".encode(
 Related
 -------
 
+SO:
+ - http://stackoverflow.com/questions/19525319/arcpy-and-python-encoding-messing-up
+  > By default, python in the command line is not going to change the code page to a UTF-8 based text for print statements to show up in Unicode. ArcGIS on the other hand specifically allows unicode values to be passed to it and has changed the code page within the command line so that the values you see printed are the values ArcGIS is using. This is why the command line should be the only environment where you see the import sys followed by import arcpy give you a different printed value.
+
 CRs:
 
  - jpn report on truncated multibyte values: [58154](http://qamonitor/QACommon/CrLookup.aspx?id2=41641)
@@ -33,5 +37,5 @@ CRs:
 Kube:
 
  - http://kube.esri.com/index.cfm?event=ehcontent.dspcontent&type=supportincidents&id=1136279&kw=addmessage%20unicode
-
+ - http://kube.esri.com/index.cfm?event=ehcontent.dspcontent&type=supportincidents&id=1221799&kw=changed%20code%20page%20unicode
 
