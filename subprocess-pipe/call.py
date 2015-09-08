@@ -1,0 +1,1 @@
+subprocess.call([r'python.exe', r'test.py', r'SystemMDW=C:\Program Files (x86)\AquaInfo\Aqua.mdw|UserMDB=C:\Program Files (x86)\AquaInfo\System\AI_mbn.mdb|DataBaseName=C:\Users\ps\Desktop\atest\Test.mdb|UserId=99999998|ObjIdsList=7297|SelObjId=7297|ObjType= 0|'])
