@@ -41,6 +41,9 @@ nosetests.xml
 # sde connections
 *.sde
 
+# debug
+*.dmp
+
 # local cruft
 requests-token/req-with.py
 raster-to-numpy-64bit/debugging-in-pro-app.txt
