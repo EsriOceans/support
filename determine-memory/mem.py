@@ -1,28 +1,28 @@
 import ctypes
 
 
-def ram():
-    kernel32 = ctypes.windll.kernel32
-    c_ulong = ctypes.c_ulong
+class MEMORYSTATUSEX(ctypes.Structure):
+    _fields_ = [
+        ("dwLength", ctypes.c_ulong),
+        ("dwMemoryLoad", ctypes.c_ulong),
+        ("ullTotalPhys", ctypes.c_ulonglong),
+        ("ullAvailPhys", ctypes.c_ulonglong),
+        ("ullTotalPageFile", ctypes.c_ulonglong),
+        ("ullAvailPageFile", ctypes.c_ulonglong),
+        ("ullTotalVirtual", ctypes.c_ulonglong),
+        ("ullAvailVirtual", ctypes.c_ulonglong),
+        ("sullAvailExtendedVirtual", ctypes.c_ulonglong),
+    ]
 
-    class MEMORYSTATUS(ctypes.Structure):
-        _fields_ = [
-            ('dwLength', c_ulong),
-            ('dwMemoryLoad', c_ulong),
-            ('dwTotalPhys', c_ulong),
-            ('dwAvailPhys', c_ulong),
-            ('dwTotalPageFile', c_ulong),
-            ('dwAvailPageFile', c_ulong),
-            ('dwTotalVirtual', c_ulong),
-            ('dwAvailVirtual', c_ulong)
-        ]
+    def __init__(self):
+        # have to initialize this to the size of MEMORYSTATUSEX
+        self.dwLength = ctypes.sizeof(self)
+        super(MEMORYSTATUSEX, self).__init__()
 
-    memory_status = MEMORYSTATUS()
-    memory_status.dwLength = ctypes.sizeof(MEMORYSTATUS)
-    kernel32.GlobalMemoryStatus(ctypes.byref(memory_status))
-    return (memory_status.dwTotalPhys, memory_status.dwAvailPhys)
+stat = MEMORYSTATUSEX()
+ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(stat))
 
-r = ram()
-(total, available) = r
-print("total memory installed: {}".format(total / (1024**2)))
-print("available memory: {}".format(available / (1024**2)))
+total = stat.ullTotalPhys
+available = stat.ullAvailPhys
+print("total memory installed: {:.2f}MB".format(total / (1024**2)))
+print("available memory: {:.2f}MB".format(available / (1024**2)))
