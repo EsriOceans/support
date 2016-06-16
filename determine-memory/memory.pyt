@@ -1,7 +1,7 @@
 import arcpy
 import ctypes
 from ctypes import wintypes
-
+# memory code from http://code.activestate.com/recipes/578513-get-memory-usage-of-windows-processes-using-getpro/
 GetCurrentProcess = ctypes.windll.kernel32.GetCurrentProcess
 GetCurrentProcess.argtypes = []
 GetCurrentProcess.restype = wintypes.HANDLE
